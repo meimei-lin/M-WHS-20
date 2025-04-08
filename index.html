@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.145.0">
+    <title>M-WHS-20</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/pricing/">
+
+    <script src="./assets/js/color-modes.js"></script>
+
+    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon" href="./assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="./assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="./assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="./assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="./assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+<link rel="icon" href="./assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#712cf9">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .bi {
+        width: 1em;
+        height: 1em;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="pricing.css" rel="stylesheet">
+  </head>
+  <body>
+
+<div class="container py-3">
+  <header>
+    <div class="flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+      <!--<a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">-->
+       <!-- <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg>-->
+        <span class="fs-4">M-WHS-20</span>
+      <!--</a>-->
+    </div>
+
+    <div class="text-center">
+      <h1 class="display-6 fw-normal text-body-emphasis">M-WHS: Myocardium Whole Heart Segmentation</h1>
+      <p class="fs-5 text-body-secondary">Overview: Accurate computing, modeling, and analysis of whole heart structure are important for developing clinical applications. However, whole heart myocardium (cardiac muscle，heart muscle) image segmentation remains challenging and still relies heavily on manual work, which is time-consuming and prone to errors. The dataset provides 20 computed tomography (CT) cardiac muscle images acquired in a real clinical environment and is intended for the annotation of whole heart structures. This dataset supports the development and validation of whole heart myocardium segmentation algorithms.</p>
+      <p class="fs-5 text-body-secondary">Protocol: For pixel-accurate ground truth, the annotation of whole heart structures is performed by perfusionists and postgraduates. Their in-depth knowledge of cardiac anatomy ensures precise labeling, contributing to the accuracy and reliability of the dataset for segmentation research.</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="row row-cols-1  text-center">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">M-WHS-20</h4>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">For participants who want to download and use the data, please click on the link below</h3>
+            <ul class="list-unstyled mt-3 mb-4">
+            </ul>
+           <a style="text-emphasis-color: #f4ecece9; font-size:20px;" href="https://drive.google.com/file/d/1M57hDf92xABgdDSU77ezDSFwwvzp0Bc9/view?usp=sharing">Download:M-WHS-20</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--<h2 class="display-6 text-center mb-4">Compare plans</h2>-->
+
+    <div class="table-responsive">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th style="width: 22%;">ID</th>
+            <th style="width: 22%;"></th>
+            <th style="width: 22%;">Dimension</th>
+            <th style="width: 22%;"></th>
+            <th style="width: 22%;"></th>
+            <th style="width: 22%;">Spacing</th>
+            <th style="width: 22%;"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="text-center">01</th>
+            <td >512 </td> <td>512</td> <td> 267</td>
+            <td>0.38mm </td> <td>0.38mm </td> <td>0.5mm</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-center">02</th>
+            <td >512 </td> <td>512</td> <td> 380</td>
+            <td>0.43mm </td> <td>0.43mm </td> <td>0.4mm</td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <th scope="row" class="text-center">03</th>
+            <td >512 </td> <td>512</td> <td> 359</td>
+            <td>0.43mm </td> <td>0.43mm </td> <td>0.5mm</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-center">04</th>
+            <td >512 </td> <td>512</td> <td> 341</td>
+            <td>0.38mm </td> <td>0.38mm </td> <td>0.5mm</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-center">05</th>
+            <td >512 </td> <td>512</td> <td> 315</td>
+            <td>0.41mm </td> <td>0.41mm </td> <td>0.5mm</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-center">08</th>
+            <td >512 </td> <td>512</td> <td> 403</td>
+            <td>0.42mm </td> <td>0.42mm </td> <td>0.40mm</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-center">09</th>
+            <td >512 </td> <td>512</td> <td> 376</td>
+            <td>0.33mm </td> <td>0.33mm </td> <td>0.4mm</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-center">10</th>
+            <td >512 </td> <td>512</td> <td> 267</td>
+            <td>0.34mm </td> <td>0.34mm </td> <td>0.5mm</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-center">11</th>
+            <td >512 </td> <td>512</td> <td> 357</td>
+            <td>0.37mm </td> <td>0.37mm </td> <td>0.4mm</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-center">12</th>
+            <td >512 </td> <td>512</td> <td> 366</td>
+            <td>0.38mm </td> <td>0.38mm </td> <td>0.5mm</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-center">13</th>
+            <td >512 </td> <td>512</td> <td> 378</td>
+            <td>0.37mm </td> <td>0.37mm </td> <td>0.5mm</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-center">15</th>
+            <td >512 </td> <td>512</td> <td> 308</td>
+            <td>0.33mm </td> <td>0.33mm </td> <td>0.5mm</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-center">17</th>
+            <td >512 </td> <td>512</td> <td> 331</td>
+            <td>0.38mm </td> <td>0.38mm </td> <td>0.5mm</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-center">18</th>
+            <td >512 </td> <td>512</td> <td> 411</td>
+            <td>0.48mm </td> <td>0.48mm </td> <td>0.4mm</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-center">20</th>
+            <td >512 </td> <td>512</td> <td> 317</td>
+            <td>0.41mm </td> <td>0.41m </td> <td>0.5mm</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-center">21</th>
+            <td >512 </td> <td>512</td> <td> 317</td>
+            <td>0.38mm </td> <td>0.38mm </td> <td>0.5mm</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-center">22</th>
+            <td >512 </td> <td>512</td> <td> 429</td>
+            <td>0.38mm </td> <td>0.38mm </td> <td>0.4mm</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-center">23</th>
+            <td >512 </td> <td>512</td> <td> 341</td>
+            <td>0.42mm </td> <td>0.42mm </td> <td>0.5mm</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-center">24</th>
+            <td >512 </td> <td>512</td> <td> 275</td>
+            <td>0.34mm </td> <td>0.34mm </td> <td>0.5mm</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-center">25</th>
+            <td >512 </td> <td>512</td> <td> 297</td>
+            <td>0.37mm </td> <td>0.37mm </td> <td>0.5mm</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <br>
+  <h3>Sample Dataset:04</h3>
+<img style="width: 100%" src="./image/img1.png">
+</div>
+<script defer src="../assets/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"></script>
+
+    </body>
+</html>
